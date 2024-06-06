@@ -137,6 +137,9 @@ void save(char filename[]) {
     fclose(stream);
 }
 
+// Deklarasi fungsi CRUD dari crud_ket_pasien.c
+void crud_ket_pasien();
+
 int main() {
     printf("Data CSV pertama : \n");
     parse("satu.csv");
@@ -145,13 +148,13 @@ int main() {
     printf("\n\nData CSV ketiga : \n");
     parse("tiga.csv");
     
-    // testing untuk save (cek di file apakah berubah)
-    //strcpy(satu[4][2],"percobaan"); 
+    // Menjalankan operasi CRUD
+    crud_ket_pasien();
 
-    // operasi fungsi pada data yang dibaca (misalkan dihapus / ditambah data baru)
+    // Menyimpan perubahan ke file
     save("satu.csv");
     save("dua.csv");
     save("tiga.csv");
-    // note : ini matrix satu,dua,tiga udah dioperasikan jadi isinya udah teredit (bukan data yang murni setelah parsing)
+
     return 0;
 }
