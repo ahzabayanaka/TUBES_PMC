@@ -137,6 +137,9 @@ void save(char filename[]) {
     fclose(stream);
 }
 
+// Deklarasi fungsi nomor 2 dari file func_2.c
+void crud_ket_pasien();
+
 int main() {
     printf("Data CSV pertama : \n");
     parse("satu.csv");
@@ -148,6 +151,9 @@ int main() {
     // testing untuk save (cek di file apakah berubah)
     //strcpy(satu[4][2],"percobaan"); 
 
+    // Menjalankan fungsi nomor 2
+    crud_ket_pasien();
+    
     // operasi fungsi pada data yang dibaca (misalkan dihapus / ditambah data baru)
     save("satu.csv");
     save("dua.csv");
